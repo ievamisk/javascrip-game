@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Memory game</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="javascript/angular.js"></script>
+        <script type="text/javascript" src="javascript/javascript.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+	<body ng-app="game" ng-controller="cards">
+            <h3 class="center-align">Memory game</h3>
+                    
+                    <div id="welcome" class="white center-align card z-depth-3" ng-show = "level == ''">
+                        <h5>Welcome to memory game! Press button below to play! </h5>
+                        <img width="350px" src="images/racoonbear.png">
+                        <a class="waves-effect waves-light btn cyan darken-2 below" ng-click="changeLevel()">Start game</a>
+                    </div>
+                    
+                <div class="row" ng-show="level != ''">
+<!--                    <button ng-click="changeLevel()">Next</button>-->
+                    <div class="{{level}} z-depth-3">
+                        <div class="picture" id="{{ cards.id }}" ng-repeat="cards in cards_arr" ng-click="flip(cards.id)">
+                            <div class="front">
+                                <img width="100%" src="images/chrustmasmix.png">
+                            </div>
+                            <div class="back">
+                                <img width="100%" src="{{ cards.back_image }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="next-level" class="modal">
+                        <div class="modal-content white center-align">
+                          <h3>Level complete!</h3>
+                            <img width="300px" src="images/win.png">
+                            <a class="modal-action modal-close waves-effect waves-light btn cyan darken-2 below" ng-click="changeLevel()">Next level</a>
+                        </div>
+                    </div>
+                    <div id="finish" class="modal">
+                        <div class="modal-content white center-align">
+                          <h3>Congratulations, YOU WON!</h3>
+                            <img width="300px" src="images/win2.png">
+                            <a class="modal-action modal-close waves-effect waves-light btn cyan darken-2 below" ng-click="newGame()">New game</a>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,1 @@
+JS þaidimo kûrimas
