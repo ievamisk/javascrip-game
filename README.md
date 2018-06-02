@@ -9,5 +9,5 @@ This project was created using HTML, CSS and AngularJS.
 Just double click index.html :)
 
 ## Screenshots
-![alt text](images/Preview/memory_game.png)
+![Screenshot](images/Preview/memory_game.png)
 
