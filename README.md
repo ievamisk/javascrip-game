@@ -9,5 +9,5 @@ This project was created using HTML, CSS and AngularJS.
 Just double click index.html :)
 
 ## Screenshots
-![Screenshot](javascript-game/images/Preview/memory_game.PNG)
+![memory_game](https://user-images.githubusercontent.com/17141606/40874467-490d895c-6678-11e8-8146-ea1edaa31c93.PNG)
 
